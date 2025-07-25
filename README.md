@@ -26,7 +26,6 @@ Data is sent via serial or Wi-Fi to a **Node.js** server, which stores, processe
 ### 🌐 Backend
 - **Node.js**
 - **Express**
-- Optional: WebSocket / MQTT for real-time updates
 - MongoDB or local JSON for data storage
 
 ### 🔌 Hardware & Firmware
