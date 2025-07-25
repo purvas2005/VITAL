@@ -1,12 +1,89 @@
-# React + Vite
+# 🩺 Health & Motion Monitoring System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack IoT-based health and motion monitoring system using **Arduino**, **Node.js**, and **React**. This project collects real-time data from various physiological and motion sensors, and displays it in a web interface for remote health tracking and emergency detection.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ⚙️ Project Overview
 
-## Expanding the ESLint configuration
+This system gathers data from three sensors connected to an Arduino:
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Gyroscope (e.g., MPU6050)** – Detects motion and orientation for fall detection.
+- **Pulse Sensor** – Monitors real-time heart rate.
+- **GPS Module (e.g., NEO-6M)** – Captures location data in case of an emergency.
+
+Data is sent via serial or Wi-Fi to a **Node.js** server, which stores, processes, and forwards it to a **React-based web dashboard** for visualization.
+
+---
+
+## 🧩 Tech Stack
+
+### 🖥️ Frontend
+- **React.js**
+- Charting (e.g., Recharts / Chart.js)
+- Live location and status display
+
+### 🌐 Backend
+- **Node.js**
+- **Express**
+- Optional: WebSocket / MQTT for real-time updates
+- MongoDB or local JSON for data storage
+
+### 🔌 Hardware & Firmware
+- **Arduino Uno / ESP8266 / ESP32**
+- MPU6050 Gyroscope/Accelerometer
+- Pulse Sensor
+- NEO-6M GPS Module
+- C++ (Arduino sketches)
+
+---
+
+## 🚀 How It Works
+
+1. **Arduino** reads sensor data and sends it via serial or Wi-Fi.
+2. **Node.js Server** receives and parses this data.
+3. Parsed data is:
+   - Stored in a database or JSON file
+   - Optionally triggers alerts (e.g., fall detected)
+   - Sent to the React frontend
+4. **React Dashboard** displays:
+   - Live pulse rate
+   - Movement status
+   - Last known GPS location on a map
+
+---
+
+## 🔧 Setup Instructions
+
+### 1. Arduino
+- Flash the board with the provided `.ino` sketch
+- Connect sensors as per the schematic
+- Configure serial/Wi-Fi connection to match the backend's expectations
+
+### 2. Backend
+```bash
+cd server
+npm install
+node index.js
+```
+
+### 3. Frontend
+```bash
+cd client
+npm install
+npm start
+```
+
+### 4. Folder Structure
+```bash
+project-root/
+├── arduino/              # Arduino sketches
+├── server/               # Node.js backend
+│   ├── index.js
+│   └── ...
+├── client/               # React frontend
+│   ├── src/
+│   └── ...
+└── README.md
+
+```
