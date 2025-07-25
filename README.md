@@ -31,7 +31,7 @@ Data is sent via serial or Wi-Fi to a **Node.js** server, which stores, processe
 ### 🔌 Hardware & Firmware
 - **Arduino Mega 2560 + ESP8266**
 - MPU6500 Gyroscope/Accelerometer
-- max30102 Pulse Sensor
+- MAX30102 Pulse Sensor
 - NEO-6M GPS Module
 - C++ (Arduino sketches)
 
