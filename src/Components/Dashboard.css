@@ -1,0 +1,88 @@
+/* src/components/Dashboard.css */
+.dashboard {
+    min-height: 100vh;
+    padding: 20px;
+    background-color: var(--secondary-color);
+  }
+  
+  .dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .dashboard-header {
+    text-align: center;
+    margin-bottom: 24px;
+  }
+  
+  .dashboard-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-color);
+  }
+  
+  .dashboard-subtitle {
+    color: var(--text-light);
+    margin-top: 4px;
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  
+  @media (min-width: 992px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+  
+  .map-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    height: 400px;
+  }
+  
+  .details-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+    margin-top: 24px;
+  }
+  
+  .details-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+  
+  .details-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  .detail-item h3 {
+    font-weight: 500;
+    color: var(--text-color);
+    margin-bottom: 4px;
+  }
+  
+  .detail-item p {
+    color: var(--text-light);
+  }
+  
+  .detail-item .fall-status {
+    color: var(--danger-color);
+    font-weight: 500;
+  }
+  
+  .no-alerts {
+    color: var(--text-light);
+    font-style: italic;
+  }

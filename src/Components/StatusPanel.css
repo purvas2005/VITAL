@@ -1,0 +1,42 @@
+/* src/components/StatusPanel.css */
+.status-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+  }
+  
+  .status-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+  
+  .status-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .status-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .status-label {
+    color: var(--text-light);
+  }
+  
+  .status-value {
+    font-weight: 500;
+  }
+  
+  .connected {
+    color: var(--success-color);
+  }
+  
+  .disconnected {
+    color: var(--danger-color);
+  }

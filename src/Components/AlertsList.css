@@ -1,0 +1,56 @@
+/* src/components/AlertsList.css */
+.alerts-container {
+    background-color: var(--white);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    padding: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .alerts-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: var(--text-color);
+  }
+  
+  .alerts-list {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+  
+  .alert-item {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  .alert-item:last-child {
+    border-bottom: none;
+  }
+  
+  .alert-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4px;
+  }
+  
+  .alert-id {
+    font-weight: 500;
+  }
+  
+  .alert-time {
+    font-size: 0.875rem;
+    color: var(--text-light);
+  }
+  
+  .alert-details {
+    margin-top: 4px;
+    font-size: 0.875rem;
+  }
+  
+  .no-alerts {
+    color: var(--text-light);
+    font-style: italic;
+    padding: 8px 0;
+  }

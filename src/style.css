@@ -1,0 +1,205 @@
+:root {
+    --color-primary: #3498db;
+    --color-secondary: #2ecc71;
+    --color-background: #f5f7fa;
+    --color-text: #34495e;
+    --color-card: #ffffff;
+    --color-warning: #e74c3c; 
+    --color-normal: #2ecc71;
+    --color-caution: #f39c12;
+  }
+  
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    line-height: 1.6;
+  }
+  
+  .app-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e8ed;
+  }
+  
+  .connection-status {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+  }
+  
+  .status-indicator {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #ccc;
+  }
+  
+  .status-indicator.connected {
+    background-color: var(--color-normal);
+  }
+  
+  .status-indicator.disconnected {
+    background-color: var(--color-warning);
+  }
+  
+  .dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    background-color: var(--color-card);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+  }
+  
+  h1 {
+    color: var(--color-primary);
+    font-size: 2rem;
+  }
+  
+  h2 {
+    color: var(--color-text);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e8ed;
+  }
+  
+  .vital-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .vital-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .vital-label {
+    font-size: 14px;
+    color: #7f8c8d;
+  }
+  
+  .vital-item span:nth-child(2) {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  
+  .text-danger {
+    color: var(--color-warning);
+  }
+  
+  .text-warning {
+    color: var(--color-caution);
+  }
+  
+  .status {
+    text-align: center;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+  }
+  
+  .status.warning {
+    background-color: var(--color-warning);
+    color: white;
+    min-height: 90px;
+    min-width: 120px; /* adjust value as needed */
+  padding: 0.5em 1em; /* optional: adds space inside */
+  text-align: center; /* optional: centers the text */
+  display: inline-block; /* makes width take effect properly */
+  }
+  
+  .status.normal {
+    background-color: var(--color-normal);
+    color: white;
+    min-height: 90px;
+    min-width: 120px; /* adjust value as needed */
+  padding: 0.5em 1em; /* optional: adds space inside */
+  text-align: center; /* optional: centers the text */
+  display: inline-block; /* makes width take effect properly */
+  }
+  
+  .status.caution {
+    background-color: var(--color-caution);
+    color: white;
+    min-height: 90px;
+    min-width: 120px; /* adjust value as needed */
+  padding: 0.5em 1em; /* optional: adds space inside */
+  text-align: center; /* optional: centers the text */
+  display: inline-block; /* makes width take effect properly */
+  }
+  
+  .fall-indicators {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .map-container {
+    grid-column: span 2;
+  }
+  
+  .map {
+    height: 300px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+  }
+  
+  .coordinates {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .alert-list-container {
+    max-height: 200px;
+    overflow-y: auto;
+  }
+  
+  .alert-list {
+    list-style: none;
+  }
+  
+  .alert-list li {
+    padding: 10px;
+    border-bottom: 1px solid #e1e8ed;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .alert-list li:last-child {
+    border-bottom: none;
+  }
+  
+  @media (max-width: 768px) {
+    .dashboard-grid {
+      grid-template-columns: 1fr;
+    }
+    
+    .map-container {
+      grid-column: span 1;
+    }
+  }
