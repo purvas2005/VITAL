@@ -8,8 +8,8 @@ A full-stack IoT-based health and motion monitoring system using **Arduino**, **
 
 This system gathers data from three sensors connected to an Arduino:
 
-- **Gyroscope (e.g., MPU6050)** – Detects motion and orientation for fall detection.
-- **Pulse Sensor** – Monitors real-time heart rate.
+- **Gyroscope (e.g., MPU6500)** – Detects motion and orientation for fall detection.
+- **Pulse Sensor (e.g., MAX30102)** – Monitors real-time heart rate.
 - **GPS Module (e.g., NEO-6M)** – Captures location data in case of an emergency.
 
 Data is sent via serial or Wi-Fi to a **Node.js** server, which stores, processes, and forwards it to a **React-based web dashboard** for visualization.
@@ -29,9 +29,9 @@ Data is sent via serial or Wi-Fi to a **Node.js** server, which stores, processe
 - MongoDB or local JSON for data storage
 
 ### 🔌 Hardware & Firmware
-- **Arduino Uno / ESP8266 / ESP32**
-- MPU6050 Gyroscope/Accelerometer
-- Pulse Sensor
+- **Arduino Mega 2560 + ESP8266**
+- MPU6500 Gyroscope/Accelerometer
+- max30102 Pulse Sensor
 - NEO-6M GPS Module
 - C++ (Arduino sketches)
 
